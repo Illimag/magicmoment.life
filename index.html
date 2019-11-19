@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="utf-8">
+		<!-- Chrome, Firefox OS, Opera and Vivaldi -->
+        <meta name="theme-color" content="#000">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#000">
+        <meta name="apple-mobile-web-app-capable"
+        content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent" />
+        <!-- This allows it be mobile scale. Erase this line and see what it does. -->
+        <meta content="width=device-width,height=device-height initial-scale=1 user-scalable=no" name="viewport">
+        <!-- End -->
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141680607-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141680607-1');
+    </script>
+
+
+        <title>MagicMoment.Life</title>
+         <!-- Google Font -->
+         <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+        <style>
+            .entry-text{
+                position: absolute;
+                            top:50%;
+                            left:50%;
+                            transform:translate(-50%, 100%);
+                            text-align: center;
+  
+            }
+
+            .entry-logo{
+                position: absolute;
+                        top:-100%;
+                        left:15%;
+                            transform:translate(-50%, -50%);
+                            height:150px;
+                            width:150px;
+                            -webkit-animation: pulsate 1s ease-out;
+                -webkit-animation-iteration-count: infinite; 
+            }
+            @-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1,1); }
+    50%{-webkit-transform: scale(.8,.8); }
+    100% {-webkit-transform: scale(1, 1); }
+}
+            
+            .entry-button.test_show{
+                opacity:1
+            }
+
+            .entry-button{
+                width:200px; 
+                height:50px;
+                opacity:0;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -20%);
+            }
+
+
+	.loading-mask {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  top: 0;
+  height: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.loading-mask.is-remove {
+  top: -150px;
+  height: 0;
+}
+
+.loading-sets {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -20px;
+}
+
+.loading {
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  border-radius: 100%;
+  float: left;
+  margin-right: 5px;
+}
+
+.loading-0 {
+  -webkit-animation: bounce 1s infinite ease;
+  -webkit-animation-delay: 0.1s;
+  background: #7db9e8;
+}
+
+.loading-1 {
+  -webkit-animation: bounce 1s infinite ease;
+  -webkit-animation-delay: 0.3s;
+  background: #7db9e8;
+}
+
+.loading-2 {
+  -webkit-animation: bounce 1s infinite ease;
+  -webkit-animation-delay: 0.5s;
+  background: #7db9e8;
+}
+
+
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+}
+
+
+            #test{
+                scroll-behavior: smooth
+            }
+            
+        html{
+            height:100%;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+            overflow-x: hidden;
+        }
+
+        .top-banner{
+
+        }
+        .mid-section{
+            width: 100%;
+            height: 100%;
+
+        }
+        .footer{
+            width: 100%;
+            height: 100px;
+            margin-top: 0px;
+        }
+        #myVideo{
+            width:100%;
+            margin-top: -100px;
+            object-fit: fill;
+            -o-object-fit: fill;
+        }
+        .text-block{
+
+        }
+        .logo{
+            height: 50px;
+            width: 50px;
+            top: 32%;
+            position: absolute;
+            left: -15%;
+        }
+        .logo_image{
+            height: 50px;
+            width: 50px;
+
+        }
+        .first_text_element{
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            color:#777;
+            font-weight:200
+        }
+        .second_text_element{
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:5%;
+            color:#777;
+            font-weight:200
+        }
+        .third_text_element{
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:2%;
+            color:#777;
+            font-weight:200
+        }
+        .fourth_text_element{
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:2%;
+            color:#777;
+            font-weight:200
+        }
+
+        .field1{
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:2%;
+        }
+
+        .contact-field1{
+            width:550px;
+            height:30px;
+            border-color:rgba(212, 190, 165, 1);
+            margin-bottom:1%;
+            font-size:1rem;
+            padding-left: 20px;
+        }
+
+        .field2{
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+
+        .contact-field2{
+            width:550px;
+            height:60px;
+            border-color:rgba(212, 190, 165, 1);
+            font-size:1rem;
+            padding-left: 20px
+        }
+
+        .button{
+            width:575px;
+            height:40px;
+            text-align:left;
+            position: relative;
+            top: 100px;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:1%;
+            padding-left:252px;
+            background-color:rgba(212, 190, 165, 1);
+            color:#fff
+        }
+
+
+        .first_footer_element{
+            display:inline-block;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            position:relative;
+            left:10%;
+            color:#777;
+            font-weight:200
+        }
+        .second_footer_element{
+            display:inline-block;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            position:relative;
+            color:#777;
+            font-weight:200
+        }
+        .third_footer_element{
+            display:inline-block;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            position:relative;
+            color:#777;
+            font-weight:200
+        }
+        .fourth_footer_element{
+            display:inline-block;
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            position:relative;
+            color:#777;
+            font-weight:200
+        }
+        .fifth_footer_element{
+            display:inline-block;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            position:relative;
+            left:50%;
+            color:#777;
+            font-weight:200
+        }
+
+        .container{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 10%;
+        }
+
+
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #999;
+        opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #999;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #999;
+        }
+
+ 
+
+        ::-webkit-scrollbar {
+            width: 8px;
+          }
+           
+          ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
+            border-radius: 8px;
+          }
+           
+          ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.3);
+          }
+
+
+          
+        /* Responsive Media Queries */
+        @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {
+    /* Styles */
+
+        .top-logo{
+            position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+        }
+
+        .transparent-logo{
+            height:75px;width:100px
+        }
+
+
+        #myVideo{
+            margin-top: 0px;
+        }
+
+        .logo{
+            position: initial;
+            top: 0%;
+        }
+        .logo_image{
+            left:30%;
+        }
+        .first_text_element{
+            margin-right: 0%;
+            top: 0px;
+        }
+        .second_text_element{
+            margin-right: 0%;
+            top: 0px;
+        }
+        .third_text_element{
+            margin-right: 0%;
+            top: 0px;
+        }
+        .fourth_text_element{
+            margin-right: 0%;
+            top: 0px;
+        }
+        .field1{
+            margin-right: 0%;
+            top: 0px;
+        }
+        .contact-field1{
+            width: 240px;
+        }
+        .field2{
+            margin-right: 0%;
+            top: 0px;
+        }
+        .contact-field2{
+            width: 240px;
+            height: 60px;
+        }
+        .button{
+            width: 265px;
+            margin-right: 0%;
+            top: 0px;
+            font-size: 16px;
+            padding-left: 90px;
+        }
+        .mid-section{
+            height:600px;
+        }
+
+        .center-footer{
+            text-align: center;
+            margin-top: -30%;
+        }
+
+        .left-footer{
+            text-align: center;
+        }
+        
+        .right-footer{
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        .first_footer_element{
+            left:0%;
+        }
+
+        .second_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: -10%;
+        }
+        .third_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: 2%;
+        }
+        .fourth_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: 10%;
+        }
+
+
+        .fifth_footer_element{
+            left: 0%;
+        }
+        .top-banner{
+            display: none;
+        }
+        .top-banner1{
+            height: 100%
+        }
+    }
+    /* Smartphones (landscape) ----------- */
+    @media only screen 
+    and (min-width : 321px)
+    and (max-height : 600px)
+     {
+    /* Styles */
+
+    .top-logo{
+            position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+        }
+
+        .transparent-logo{
+            height:150px;width:200px
+        }
+
+        .top-banner{
+            display: none;
+        }
+        
+
+        .center-footer{
+            text-align: center;
+            margin-top: -20%;
+        }
+
+        .left-footer{
+            text-align: center;
+        }
+        
+        .right-footer{
+            text-align: center;
+            margin-top: 20%;
+            margin-bottom: 10%;
+        }
+
+        .first_footer_element{
+            left:0%;
+        }
+
+        .second_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: -10%;
+        }
+        .third_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: 2%;
+        }
+        .fourth_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: 10%;
+        }
+
+
+        .fifth_footer_element{
+            left: 0%;
+        }
+    
+    }
+    /* Smartphones (portrait) ----------- */
+    @media only screen 
+    and (max-width : 320px) {
+    /* Styles */
+    .top-logo{
+        position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+    }
+
+    .transparent-logo{
+        height:150px;width:200px
+    }
+
+    .top-banner{
+        display: none;
+    }
+    .center-footer{
+        text-align: center;
+        margin-top: -30%;
+    }
+
+    .left-footer{
+        text-align: center;
+    }
+    
+    .right-footer{
+        text-align: center;
+        margin-top: 20%;
+    }
+
+    .first_footer_element{
+        left:0%;
+    }
+
+    .second_footer_element{
+        right: 0%;
+        bottom: 0%;
+        left: -10%;
+    }
+    .third_footer_element{
+        right: 0%;
+        bottom: 0%;
+        left: 2%;
+    }
+    .fourth_footer_element{
+        right: 0%;
+        bottom: 0%;
+        left: 10%;
+    }
+
+
+    .fifth_footer_element{
+        left: 0%;
+    }
+
+    }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) {
+    /* Styles */
+    .top-banner{
+            display: none
+        }
+    .top-banner1{
+        height: 100%;
+    }
+    #myVideo{
+        margin-top: 0px;
+    }
+
+    .container{
+        margin-top: 40%;
+    }
+        
+        .top-logo{
+            position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+        }
+
+        .transparent-logo{
+            height:150px;width:200px
+        }
+        
+        .center-footer{
+            text-align: center;
+            margin-top: -20%;
+        }
+
+        .left-footer{
+            text-align: center;
+        }
+        
+        .right-footer{
+            text-align: center;
+            margin-top: 20%;
+            margin-bottom: 10%;
+        }
+
+        .first_footer_element{
+            left:0%;
+        }
+
+        .second_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: -10%;
+        }
+        .third_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: 2%;
+        }
+        .fourth_footer_element{
+            right: 0%;
+            bottom: 0%;
+            left: 10%;
+        }
+
+
+        .fifth_footer_element{
+            left: 0%;
+        }
+    }
+    /* iPads (landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape) {
+    /* Styles */
+
+    .top-logo{
+        position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+    }
+
+    .transparent-logo{
+        height:150px;width:200px
+    }
+
+    .top-banner{
+        display: none;
+    }
+    
+    .first_footer_element{
+        left:30%;
+    }
+    .second_footer_element{
+        margin-left:3%;
+        margin-right:3%
+    }
+    .third_footer_element{
+        margin-left:3%;
+        margin-right:3%
+    }
+    .fourth_footer_element{
+        margin-left:3%;
+        margin-right:3%
+    }
+    .fifth_footer_element{
+        left:-30%;
+    }
+
+    .left-footer{
+        width:20%;display:inline-block;text-align:left
+    }
+
+    .center-footer{
+        display:inline-block;width:60%;text-align:center
+    }
+
+    .right-footer{
+        width:19%;display:inline-block;text-align:right
+    }
+}
+
+        
+
+
+    
+    /* iPads (portrait) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
+    /* Styles */
+
+    .top-logo{
+        position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+    }
+
+    .transparent-logo{
+        height:150px;width:200px
+    }
+
+    .top-banner{
+        display: none;
+    }
+    
+    .first_footer_element{
+        left:30%;
+    }
+    .second_footer_element{
+        margin-left:3%;
+        margin-right:3%
+    }
+    .third_footer_element{
+        margin-left:3%;
+        margin-right:3%
+    }
+    .fourth_footer_element{
+        margin-left:3%;
+        margin-right:3%
+    }
+    .fifth_footer_element{
+        left:-30%;
+    }
+
+    .left-footer{
+        width:20%;display:inline-block;text-align:left
+    }
+
+    .center-footer{
+        display:inline-block;width:60%;text-align:center
+    }
+
+    .right-footer{
+        width:19%;display:inline-block;text-align:right
+    }
+}
+    
+
+    /* 13inch macbooks ----------- */
+    @media only screen 
+    and (min-width : 1024px) 
+    and (max-width : 1223px) {
+
+        .top-logo{
+            position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+        }
+
+        .transparent-logo{
+            height:150px;width:200px
+        }
+
+        .top-banner{
+            display: none;
+        }
+        
+        .first_footer_element{
+            left:30%;
+        }
+        .second_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .third_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .fourth_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .fifth_footer_element{
+            left:-30%;
+        }
+
+        .left-footer{
+            width:20%;display:inline-block;text-align:left
+        }
+
+        .center-footer{
+            display:inline-block;width:60%;text-align:center
+        }
+
+        .right-footer{
+            width:19%;display:inline-block;text-align:right
+        }
+        
+    }
+
+    /* Desktops and laptops ----------- */
+    @media only screen 
+    and (min-width : 1224px) {
+    /* Styles */
+
+        .top-logo{
+            position:absolute;left:35%;top:50%;z-index:1;transform: translate(-50%,-50%);
+        }
+
+        .transparent-logo{
+            height:150px;width:200px
+        }
+
+        .top-banner{
+            height:100%;
+        }
+
+        #myVideo{
+            height:100%;
+            margin-top: 0px;
+        }
+
+        .first_footer_element{
+            left:30%;
+        }
+        .second_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .third_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .fourth_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .fifth_footer_element{
+            left:-30%;
+        }
+        #mobile-background{
+            display: none;
+        }
+
+        .left-footer{
+            width:20%;display:inline-block;text-align:left
+        }
+
+        .center-footer{
+            display:inline-block;width:60%;text-align:center
+        }
+
+        .right-footer{
+            width:19%;display:inline-block;text-align:right
+        }
+        #loading-page{
+            display: none
+        }
+    }
+    /* Large screens ----------- */
+    @media only screen 
+    and (min-width : 1824px) {
+    /* Styles */
+    #myVideo{
+            width:100%;
+            object-fit: fill;
+            -o-object-fit: fill;
+        }
+        .mid-section{
+            width: 100%;
+            height: 100%;
+            margin-top:-100px;
+        }
+
+
+        .first_footer_element{
+            left:30%;
+        }
+        .second_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .third_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .fourth_footer_element{
+            margin-left:3%;
+            margin-right:3%
+        }
+        .fifth_footer_element{
+            left:-30%;
+        }
+        #mobile-background{
+            display: none;
+        }
+
+        .left-footer{
+            width:20%;display:inline-block;text-align:left
+        }
+
+        .center-footer{
+            display:inline-block;width:60%;text-align:center
+        }
+
+        .right-footer{
+            width:19%;display:inline-block;text-align:right
+        }
+
+        #loading-page{
+            display: none;
+        }
+
+    }
+
+
+        </style>
+    </head>
+
+    <body>
+
+  
+            <audio autoplay loop id="desktop-audio">
+                    <source src="Dean Lewis - Waves (Official Video).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                  </audio>
+
+
+                <div class="js-loading-mask loading-mask" id="loading-page">
+                        <div class="loading-sets">
+                          <div class="loading loading-0"></div>
+                          <div class="loading loading-1"></div>
+                          <div class="loading loading-2"></div>
+                          
+                        <div>
+                            <h5 style="color:#fff;position:absolute;left:50%;transform:translate(-50%);text-align:center">Loading..</h5>
+                        </div>
+
+
+                        <div id="show" class="entry-button" onclick="removeoverlay(); launchFullscreen(document.documentElement);play()">
+                            <img class="entry-logo" src="images/logo.png">
+                        </div>
+
+
+                        </div>
+                      </div>
+
+        <a class="top-logo" href="#test">
+                <img class="transparent-logo" src="images/transparent_logo.png">
+        </a>
+
+        <div class="top-banner" id="background">
+                <video autoplay muted loop id="myVideo">
+                        <source data-src="images/background-video.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+        </div>
+
+        <div class="top-banner1" id="mobile-background">
+                <video autoplay muted loop playsinline style="height:100%" id="myVideo">
+                        <source src="images/Landing_1ttt.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+    </div>
+
+
+        <!-- Midsection-->
+        <div class="mid-section" >
+
+            <!-- Container -->
+            <div class="container" id="test">
+            <!-- Logo -->
+            <div class="logo">
+                <img class="logo_image" src="images/logo.png">
+            </div>
+            <!-- End of Logo-->
+            <!-- Textblock-->
+            <div class="text-block">
+                
+            <h1 class="first_text_element">Magicmoment.Life is a social network experience </br>empowering heart-felt connections starting from
+                    cultivating gratitude.
+            </h1>
+
+            <h1 class="second_text_element">The world is as big as our heart open up to...</h1>
+        
+            <h3 class="third_text_element">Our team is creating to bring it live.</h3>
+            <h3 class="fourth_text_element">Be the first to know when magic happens.</h3>
+
+
+            <form name="form1" method="post" action="contact.php">
+                <!-- Input field-->
+            <div class="field1">
+                    <input class="contact-field1" name="customer_mail" type="text" placeholder="Enter your email here" required>
+                  </div>
+                
+                  <div class="field2">
+                    <input class="contact-field2" name="detail" type="text" placeholder="Add a note ..." required>
+                  </div>
+                  <!-- End of input field-->
+
+                  <input class="button" type="submit" name="Submit" value="NOTIFY ME!" value="Submit">
+                </form>
+                
+                </div>
+                <!-- End of Text-page-->
+            </div>
+            <!-- End of Container -->
+        </div>
+        <!-- End of midsection-->
+        <div class="footer">
+
+            <div class="left-footer">
+            <h1 class="first_footer_element">magic@magicmoment.life</h1>
+            </div>
+
+            <div class="center-footer">
+            <h1 class="second_footer_element" ><a style="color:#777;text-decoration: none;" href="https://www.linkedin.com/company/magicmoment-life">Linkedin</a></h1>
+            <h1 class="third_footer_element"><a style="color:#777;text-decoration: none;" href="https://www.instagram.com/magicmoment.life">Instagram</a></h1>
+            <h1 class="fourth_footer_element"><a style="color:#777;text-decoration: none;" href="https://www.facebook.com/MagicmomentLife-397878690965949/">Facebook</a></h1>
+            </div>
+
+            <div class="right-footer">
+            <h1 class="fifth_footer_element">Palo Alto, California</h1>
+            </div>
+        </div>
+    </body>
+
+
+    
+
+    <script>
+            var total_width = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+            console.log(total_width)
+
+            var total_height = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+            console.log(total_height)
+
+        var change = document.querySelector('#background');
+        change.style.width= total_width;
+        change.style.height= total_height;
+
+        var mobile_change = document.querySelector('#mobile-background');
+        change.style.width = total_width;
+        change.style.height = total_height;
+
+
+
+        if(screen.width >=1224 && screen.width < 1824){
+
+
+        var src_changer = document.getElementsByTagName('source');
+        for (var i=0; i<src_changer.length; i++) {
+        if(src_changer[i].getAttribute('data-src')) {
+            src_changer[i].setAttribute('src',src_changer[i].getAttribute('data-src'));
+            src_changer[i].removeAttribute('data-src');
+
+       var video = document.querySelector('#myVideo');
+       video.src = "images/background-video.mp4";
+       video.load();
+       video.play();
+    }
+}
+
+        
+    }
+
+        if (screen.width >= 1824){
+
+            var src_changer = document.getElementsByTagName('source');
+        for (var i=0; i<src_changer.length; i++) {
+        if(src_changer[i].getAttribute('data-src')) {
+            src_changer[i].setAttribute('src',src_changer[i].getAttribute('data-src'));
+            src_changer[i].removeAttribute('data-src');
+
+       var video = document.querySelector('#myVideo');
+       video.src = "images/background-video.mp4";
+       video.load();
+       video.play();
+    }
+}
+    }
+
+
+window.addEventListener('load', function() {
+
+    
+    var testele = document.getElementById("show");
+    testele.classList.add("test_show");
+
+
+
+
+
+
+    })
+
+    function removeoverlay(){
+        var element = document.getElementById("loading-page");
+        element.classList.add("is-remove");
+    }
+
+
+    function launchFullscreen(element) {
+	if(element.requestFullscreen) {
+	  element.requestFullscreen();
+	} else if(element.mozRequestFullScreen) {
+	  element.mozRequestFullScreen();
+	} else if(element.webkitRequestFullscreen) {
+	  element.webkitRequestFullscreen();
+	} else if(element.msRequestFullscreen) {
+	  element.msRequestFullscreen();
+	}
+  }
+
+
+
+  function play(){
+       var audio = document.getElementById("desktop-audio");
+       audio.play();
+  }
+    </script>
+
+
+
+    <script src="js/zenscroll-min.js"></script>
+
+</html>
